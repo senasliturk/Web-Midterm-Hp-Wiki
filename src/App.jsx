@@ -7,26 +7,26 @@ import Spells from './pages/Spells';
 import CharacterDetail from './pages/CharacterDetail';
 import Movies from './pages/Movies'; 
 import Books from './pages/Books'; 
-import bgMusic from './assets/sortingaudio.mp3';
+//import bgMusic from './assets/sortingaudio.mp3';
 
 function App() {
-  const audioRef = useRef(new Audio(bgMusic));
-  const [isPlaying, setIsPlaying] = useState(false);
+  //const audioRef = useRef(new Audio(bgMusic));
+  //const [isPlaying, setIsPlaying] = useState(false);
 
-  useEffect(() => {
-    audioRef.current.loop = true; 
-    audioRef.current.volume = 0.5; 
-    const playAudio = () => {
-      if (!isPlaying) {
-        audioRef.current.play()
-          .then(() => setIsPlaying(true))
-          .catch(err => console.log("Audio play error:", err));
-      }
-    };
+  //useEffect(() => {
+    //audioRef.current.loop = true; 
+    //audioRef.current.volume = 0.5; 
+    //const playAudio = () => {
+      //if (!isPlaying) {
+        //audioRef.current.play()
+          //.then(() => setIsPlaying(true))
+        //  .catch(err => console.log("Audio play error:", err));
+      //}
+    //};
 
-    window.addEventListener('click', playAudio);
-    return () => { window.removeEventListener('click', playAudio); };
-  }, [isPlaying]);
+   // window.addEventListener('click', playAudio);
+   // return () => { window.removeEventListener('click', playAudio); };
+  //}, [isPlaying]);
 
   return (
     <Router>
